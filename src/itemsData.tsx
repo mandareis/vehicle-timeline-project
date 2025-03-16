@@ -1,4 +1,5 @@
 import {
+  AutoStories,
   DirectionsBoat,
   DirectionsWalk,
   Flight,
@@ -6,9 +7,15 @@ import {
   Train,
 } from "@mui/icons-material";
 import React from "react";
-
+import GermanCar from "./assets/nazi-german-car.jpg";
+import Trains from "./assets/train-evacuees.jpeg";
+import Plane from "./assets/iran-revolution.jpg";
+import Ship from "./assets/ships-portugal.jpg";
+import OnFoot from "./assets/ww2-on-foot.webp";
+import PrintingPress from "./assets/printing-press-ww2.jpg";
 export interface VehicleCardData {
   title: string;
+  imageLiteral: React.ReactNode;
   icon: React.ReactNode;
   literalContent: string;
   allegoricalContent: string;
@@ -17,35 +24,92 @@ export interface VehicleCardData {
 export const itemsData: VehicleCardData[] = [
   {
     title: "Cars",
-    icon: <TimeToLeave />,
+    icon: <TimeToLeave className="icons" />,
     literalContent:
-      "Men of the British Expeditionary Force (BEF) wade out to a destroyer during the evacuation from Dunkirk.",
+      "In 'A Night in Lisbon' refugees fleeing Nazi Germany by car.",
+    imageLiteral: (
+      <img
+        src={GermanCar}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
     allegoricalContent:
-      "On 10 May 1940, Hitler began his long-awaited offensive in the west by invading neutral Holland and Belgium and attacking northern France. Holland capitulated after only five days of fighting, and the Belgians surrendered on 28 May. With the success of the German ‘Blitzkrieg’, the British Expeditionary Force and French troops were in danger of being cut off and destroyed.",
+      "Persepolis' family car the meaning of the nice car and what it means as a sanctuary.",
   },
   {
     title: "Trains",
+    imageLiteral: (
+      <img
+        src={Trains}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
     icon: <Train />,
-    literalContent: "RAF Spitfire pilots scramble for their planes",
+    literalContent:
+      "The intense train border crossing and checking of documents for Schwartz's experience of it.",
     allegoricalContent:
-      "fter France’s surrender in June 1940, Churchill told the British people, “Hitler knows that he will have to break us in this island or lose the war”. To mount a successful invasion, the Germans had to gain air superiority. The first phase of the battle began on 10 July with Luftwaffe attacks on shipping in the Channel.",
+      "The significance of the train going through the pension in Mary, the meaning of memories coming back from a previous life.",
   },
   {
     title: "Planes",
+    imageLiteral: (
+      <img
+        src={Plane}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
     icon: <Flight />,
-    literalContent: "Lorem ipsum.",
-    allegoricalContent: "Dolar sit amet.",
+    literalContent:
+      "In Persepolis, Marjane's flight from Tehran to Vienna, depicting a transition between worlds.",
+    allegoricalContent:
+      "Explore how in the same novel, what her flight back home symbolizes.",
   },
   {
     title: "Ships/Boats",
+    imageLiteral: (
+      <img
+        src={Ship}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
     icon: <DirectionsBoat />,
-    literalContent: "Lorem ipsum.",
-    allegoricalContent: "Dolar sit amet.",
+    literalContent:
+      "A Night in Lisbon, The ship to America described at the port of Lisbon, representing the last final physical vehicle of espace that refugees had.",
+    allegoricalContent:
+      "The same ship serves as a symbol of salvation and rebirth; at a port of a melting pot of cultural backgrounds.",
   },
   {
     title: "On Foot",
+    imageLiteral: (
+      <img
+        src={OnFoot}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
     icon: <DirectionsWalk />,
-    literalContent: "Lorem ipsum.",
-    allegoricalContent: "Dolar sit amet.",
+    literalContent:
+      "The literal walk of Schwartz through the Pyrenees and the physical hardship.",
+    allegoricalContent:
+      "In Persepolis, Marjane's walking through Vienna streets as a homeless teen; representing her isolation as an immigrants.",
+  },
+  {
+    title: "Books/Printing Press",
+    imageLiteral: (
+      <img
+        src={PrintingPress}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
+    icon: <AutoStories />,
+    literalContent:
+      "The free Russian Press and what it stands for and what it entails of.",
+    allegoricalContent:
+      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
   },
 ];

@@ -43,6 +43,8 @@ const SplitContent = ({ data }: { data: VehicleCardData }) => {
         </Button>
       </ButtonGroup>
       <div>
+        {which === ContentType.Literal ? <div>{data.imageLiteral} </div> : null}
+
         {which === ContentType.Allegorical && <>{data.allegoricalContent}</>}
         {which === ContentType.Literal && <>{data.literalContent}</>}
       </div>
@@ -71,7 +73,6 @@ const Timeline = () => {
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
-      ;
     </>
   );
 };
