@@ -1,23 +1,13 @@
 import "./App.css";
 import Timeline from "./timeline";
-import Typewriter from "typewriter-effect";
-
+import Title from "./assets/88d88aecd5ea2afb330dd9ffd19cbcdc.png";
 function App() {
   return (
     <div>
-      <Typewriter
-        onInit={(typewriter) => {
-          typewriter
-            .typeString("Vehicles of the Immigrant Life")
-            .pauseFor(3000)
-            .deleteAll()
-            .start();
-        }}
-        options={{
-          loop: true,
-          wrapperClassName: "title",
-          cursorClassName: "cursor",
-        }}
+      <img
+        src={Title}
+        alt="Vehicles of Immigrant Experience"
+        className="title"
       />
       <Timeline />
     </div>

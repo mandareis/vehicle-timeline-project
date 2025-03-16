@@ -18,8 +18,7 @@
     "react-chrono": "^2.6.1",
     "react-dom": "^18.1.0",
     "react-vertical-timeline-component": "^3.5.3",
-    "styled-components": "^6.1.15",
-    "typewriter-effect": "^2.21.0"
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

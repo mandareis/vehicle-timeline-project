@@ -29,7 +29,7 @@ const SplitContent = ({ data }: { data: VehicleCardData }) => {
             setWhich(ContentType.Literal);
           }}
         >
-          Literal
+          <span>Literal</span>
         </Button>
         <Button
           className={
@@ -39,7 +39,7 @@ const SplitContent = ({ data }: { data: VehicleCardData }) => {
             setWhich(ContentType.Allegorical);
           }}
         >
-          Allegorical
+          <span> Allegorical</span>
         </Button>
       </ButtonGroup>
       <div>
@@ -59,6 +59,34 @@ const SplitContainer = styled.div`
 const Timeline = () => {
   return (
     <>
+      <div className="introduction-container">
+        <p>
+          Throughout history, there have been waves of human migration driven by
+          economic necessity, political upheaval, or simply the promise of
+          better living conditions. Whether looking at it through the lens of
+          emigration(leaving one’s homeland) or immigration(arriving in a new
+          country), a migrant’s life exists in a state of division—caught
+          between the geographical and psychological distance. While technically
+          a migrant becomes an “immigrant” only upon arrival, their identities
+          begin to reshape as early as the emigration process: the reason for
+          leaving, saying goodbye to all one has known, and the memories crossed
+          with one across country lines.
+        </p>
+        <p>
+          This metamorphosis is a challenging one—having to adapt to a new life
+          by learning a new language and cultural norms while still holding on
+          to a sense of identity from their home country. The vehicles through
+          which immigrants express and navigate this complex reality—ships
+          crossing treacherous waters and planes crossing borders— serve as
+          literal transport and powerful metaphors for the immigrant journey. It
+          is as a bridge between their old and new world, allowing them to exist
+          in this limbo of displacement, adaptation, and longing. These vehicles
+          are essential to the immigrant experience as they symbolize more than
+          a geographical relocation, but also as a way to exist as both your old
+          and new self.
+        </p>
+      </div>
+
       <VerticalTimeline>
         {itemsData.map((d, i) => (
           <VerticalTimelineElement
