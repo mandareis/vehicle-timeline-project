@@ -26,6 +26,7 @@ export interface VehicleCardData {
   icon: React.ReactNode;
   literalContent: string;
   symbolicContent: React.ReactNode | string;
+  literal: boolean;
 }
 
 export const itemsData: VehicleCardData[] = [
@@ -66,6 +67,7 @@ export const itemsData: VehicleCardData[] = [
         </div>
       </>
     ),
+    literal: true,
   },
   {
     title: "Trains",
@@ -99,6 +101,7 @@ export const itemsData: VehicleCardData[] = [
         </div>
       </>
     ),
+    literal: true,
   },
   {
     title: "Planes",
@@ -135,6 +138,7 @@ export const itemsData: VehicleCardData[] = [
         </div>
       </>
     ),
+    literal: true,
   },
 
   {
@@ -169,6 +173,7 @@ export const itemsData: VehicleCardData[] = [
         </div>
       </>
     ),
+    literal: true,
   },
   {
     title: "On Foot",
@@ -210,6 +215,7 @@ export const itemsData: VehicleCardData[] = [
         </div>
       </>
     ),
+    literal: true,
   },
   {
     title: "Books/Printing Press",
@@ -225,6 +231,7 @@ export const itemsData: VehicleCardData[] = [
       "The free Russian Press and what it stands for and what it entails of.",
     symbolicContent:
       "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+    literal: false,
   },
   {
     title: "Language",
@@ -240,6 +247,7 @@ export const itemsData: VehicleCardData[] = [
       "The free Russian Press and what it stands for and what it entails of.",
     symbolicContent:
       "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+    literal: false,
   },
   {
     title: "Photographs",
@@ -255,6 +263,7 @@ export const itemsData: VehicleCardData[] = [
       "The free Russian Press and what it stands for and what it entails of.",
     symbolicContent:
       "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+    literal: false,
   },
   {
     title: "Music & Other Art Forms",
@@ -270,5 +279,6 @@ export const itemsData: VehicleCardData[] = [
       "The free Russian Press and what it stands for and what it entails of.",
     symbolicContent:
       "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+    literal: false,
   },
 ];

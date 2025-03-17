@@ -9,6 +9,42 @@ import "react-vertical-timeline-component/style.min.css";
 import { useState } from "react";
 import { Button, ButtonGroup, Typography } from "@mui/material";
 
+interface FilterControlsProps {
+  showLiteral: boolean;
+  setShowLiteral: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const FilterControls: React.FC<FilterControlsProps> = ({
+  showLiteral,
+  setShowLiteral,
+}) => {
+  return (
+    <div>
+      <ButtonGroup
+        style={{ marginBottom: "1em" }}
+        variant="contained"
+        aria-label="Basic button group"
+      >
+        <Button
+          onClick={() => setShowLiteral(true)}
+          className={showLiteral ? "Mui-focusVisible" : ""}
+        >
+          <span>Physical</span>
+        </Button>
+        <Button
+          onClick={() => setShowLiteral(false)}
+          className={!showLiteral ? "Mui-focusVisible" : ""}
+        >
+          <span> Cultural & Memory</span>
+        </Button>
+      </ButtonGroup>
+    </div>
+  );
+};
+const getFilteredItems = (items: VehicleCardData[], showLiteral: boolean) => {
+  return items.filter((d) => d.literal === showLiteral);
+};
+
 const SplitContent = ({ data }: { data: VehicleCardData }) => {
   enum ContentType {
     Symbolic,
@@ -57,6 +93,10 @@ const SplitContainer = styled.div`
 `;
 
 const Timeline = () => {
+  const [showLiteral, setShowLiteral] = useState(true);
+
+  const filteredItems = getFilteredItems(itemsData, showLiteral);
+
   return (
     <>
       <div className="introduction-container">
@@ -86,9 +126,12 @@ const Timeline = () => {
           and new self.
         </p>
       </div>
-
+      <FilterControls
+        showLiteral={showLiteral}
+        setShowLiteral={setShowLiteral}
+      />
       <VerticalTimeline>
-        {itemsData.map((d, i) => (
+        {filteredItems.map((d, i) => (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             icon={d.icon}
