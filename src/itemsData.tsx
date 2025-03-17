@@ -4,6 +4,9 @@ import {
   DirectionsWalk,
   Flight,
   TimeToLeave,
+  Language,
+  MusicNote,
+  CameraAlt,
   Train,
 } from "@mui/icons-material";
 import React from "react";
@@ -13,12 +16,16 @@ import Plane from "./assets/iran-revolution.jpg";
 import Ship from "./assets/ships-portugal.jpg";
 import OnFoot from "./assets/ww2-on-foot.webp";
 import PrintingPress from "./assets/printing-press-ww2.jpg";
+import Languages from "./assets/hello-languages.jpg";
+import Photograph from "./assets/amalfi-italy.webp";
+import Music from "./assets/music-europe.webp";
+
 export interface VehicleCardData {
   title: string;
   imageLiteral: React.ReactNode;
   icon: React.ReactNode;
   literalContent: string;
-  allegoricalContent: React.ReactNode | string;
+  symbolicContent: React.ReactNode | string;
 }
 
 export const itemsData: VehicleCardData[] = [
@@ -26,7 +33,7 @@ export const itemsData: VehicleCardData[] = [
     title: "Cars",
     icon: <TimeToLeave className="icons" />,
     literalContent:
-      "While cars are not ideal for mass waves of emigration, as it can get stopped at every country border, they are a convenient mode of transportation for smaller groups. Cars can represent quicker mobility as it doesn't depend on a scheduled route. It also allows individuals to bring their posessions more easily. In the life of an immigrant,  a car can also signify can signify economic progression, as it might allow them to have a more stable life by having a wider range of employment options regardless of their address.",
+      "While cars are not ideal for mass waves of emigration, as they can get stopped at every country border, they are a convenient mode of transportation for smaller groups. Cars can represent quicker mobility as it doesn't depend on a scheduled route. It also allows individuals to bring their possessions more easily. In the life of an immigrant, a car can also signify economic progression, as it might allow them to have a more stable life by having a wider range of employment options regardless of their address.",
     imageLiteral: (
       <img
         src={GermanCar}
@@ -34,24 +41,28 @@ export const itemsData: VehicleCardData[] = [
         alt="German Car During World War II"
       />
     ),
-    allegoricalContent: (
+    symbolicContent: (
       <>
         <i>
           'In some inexplicable way the car became a kind of dark mascot; its
           technical perfection even dispelled my horror of it. My need of the
-          car made me forget about George.' — Josef Schwarz in Erich Maria
+          car made me forget about Georg.' — Josef Schwarz in Erich Maria
           Remarque's The Night in Lisbon, p. 246
         </i>
         <div className="data-paragraph">
-          Cars can be seen as a means of escape of reality. This can be
-          manisfested in a number of ways. While Schwartz, Helen and the boy
-          travel throughout country borders, they enter an isolated bubble of
-          their own reality. Schwarz sees the car's asthetics as a safety,
-          regardless of its dark connections. While the car provides them
-          security of the immediate dangerous of war. It provides them with a
-          sanctuary. It also represents liminal space, as they find themselves
-          in-between state—neither fully out of the country they've left behind
-          nor in the destination ahead.
+          Cars can be seen as a means of escape from reality. This can be
+          manifested in a number of ways. While Schwarz, Helen, and the boy
+          travel across country borders, they enter an isolated bubble of their
+          own reality—a mobile sanctuary separated from the chaos of war.
+          Schwarz's views of the car transform significantly; despite its
+          description as a "dark mascot," Schwarz knows their survival depends
+          on the car. The vehicle provides immediate protection from the
+          physical war while creating a psychological sanctuary. It also
+          represents liminal space, as they find themselves in-between
+          state—neither fully out of the country they've left behind nor in the
+          destination ahead, representing a limbo space between past trauma and
+          their uncertain future. The car becomes both literal and metaphorical
+          transport through this liminal existence.
         </div>
       </>
     ),
@@ -67,9 +78,27 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <Train />,
     literalContent:
-      "The intense train border crossing and checking of documents for Schwartz's experience of it.",
-    allegoricalContent:
-      "The significance of the train going through the pension in Mary, the meaning of memories coming back from a previous life.",
+      "Trains were the most popular means of mass emigration, given their frequency of departure—making it easy to leave at any time of the day. However, especially during World War II, it became excruciatingly hard to get tickets, even more so for those fleeing and lacking the required documentation. Trains offered both safety and danger for refugees. While one could blend in with other passengers, trains were routinely stopped at borders and thoroughly searched by authorities who knew they were common escape routes.",
+    symbolicContent: (
+      <>
+        <i>
+          'For almost a month, I lived at this rhythm: The night prostrate and
+          the day letting myself be carried across Vienna by sleep and the
+          tramway.' -- Marjane in Persepolis, p. 238
+        </i>
+        <div className="data-paragraph">
+          Trains are the definition to liminal space. Often on train rides, we
+          look out the window and ponder back on our lives. We often enter the
+          train as a person, and leave as someone new. Riding on a train, as
+          with any passage, evokes the idea of passing through time, as the
+          wheels on tracks cause that almost hypnotizing sound, a state of
+          trance. It is precisely this liminal space that allows Marjane to find
+          momentary peace while far from home; her daily tram journeys across
+          Vienna become both a routine that grounds her and a metaphor for her
+          displacement—constantly in motion yet never truly arriving.
+        </div>
+      </>
+    ),
   },
   {
     title: "Planes",
@@ -82,10 +111,32 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <Flight />,
     literalContent:
-      "In Persepolis, Marjane's flight from Tehran to Vienna, depicting a transition between worlds.",
-    allegoricalContent:
-      "Explore how in the same novel, what her flight back home symbolizes.",
+      "Planes were perhaps less common means of transportation to be used as a form of escape. Planes did become more common for refugees in the latter half of the 20th century; as seen in Persepolis, Marjane's flight from Tehran to Vienna depicts a transition between two worlds.",
+    symbolicContent: (
+      <>
+        <i>
+          'I couldn't bear looking at them there behind the glass. Nothing worse
+          than saying goodbye. It's a little like dying.' -- Marjane in
+          Persepolis, p. 153
+        </i>
+        <div className="data-paragraph">
+          Traveling by airplane shares many of the symbolic qualities with other
+          vehicles of migration, however, it also adds alayer of physical
+          detachment— of being above the earth, a state incomparable to any
+          other form of transport. However, the airport itself emerges as a more
+          symbolic immigrant experience. Airports perfectly embody what Foucault
+          describes as a "heterotopic space." With their strictly regulated
+          systems of open spaces(public terminals) and closed spaces(security
+          checkpoints, gates), accessible only with certain permissions, such as
+          flight tickets, airports create a system picture of permission and
+          exclusion. The airport then represents the national boundary as well
+          as the bureaucratic process that stands between the immigrant and
+          their new life.
+        </div>
+      </>
+    ),
   },
+
   {
     title: "Ships/Boats",
     imageLiteral: (
@@ -97,9 +148,27 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <DirectionsBoat />,
     literalContent:
-      "A Night in Lisbon, The ship to America described at the port of Lisbon, representing the last final physical vehicle of espace that refugees had.",
-    allegoricalContent:
-      "The same ship serves as a symbol of salvation and rebirth; at a port of a melting pot of cultural backgrounds.",
+      "In The Night in Lisbon, the ship to America described at the port of Lisbon represents the last final physical vehicle of escape that refugees had. Ships symbolized hope of the future and escape from persecution. Adding the entire Atlantic ocean between themselves and the war, they represented physical freedom.",
+    symbolicContent: (
+      <>
+        <i>
+          "To me, life was the ship that lay down there on the Tagus, and it
+          didn't lead to the infinite... it led to America." — Narrator in Erich
+          Maria Remarque's The Night in Lisbon, p. 110
+        </i>
+        <div className="data-paragraph">
+          "The same ship serves as a symbol of salvation and rebirth, marking
+          the immigrant's journey from their old identity to a new self across
+          the vast expanse of the ocean. Given the duration it could take to
+          cross the Atlantic, ships also allowed for bonds to form between
+          people struggling with the same problems, leading to the building of
+          communities. Similar to the liminal space of cars, ships also
+          literally and figuratively represented floating between worlds.
+          Emphasizing the displacement of an immigrant, once the ship departed,
+          it symbolized a point of no return.",
+        </div>
+      </>
+    ),
   },
   {
     title: "On Foot",
@@ -112,9 +181,35 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <DirectionsWalk />,
     literalContent:
-      "The literal walk of Schwartz through the Pyrenees and the physical hardship.",
-    allegoricalContent:
-      "In Persepolis, Marjane's walking through Vienna streets as a homeless teen; representing her isolation as an immigrants.",
+      "The oldest means of migration is the act of walking to a destination. Schwarz crosses the border back into Germany through Austria on foot. Typically crossing a border on foot involves challenging terrains such as deserts, mountains or dense forests. This method of transportation is often an exhausting one that can lead to dehydration or injury.",
+    symbolicContent: (
+      <>
+        <i>
+          'I feel as though I were crossing a high bridge from one side of my
+          life to the other, and I knew that the bridge would fade away behind
+          me like silvery smoke and that I'd never be able to return. I was
+          passing from reason to feeling, from security to adventure, from
+          rationality to dream.' — Josef Schwarz in Erich Maria Remarque's The
+          Night in Lisbon, p. 23
+        </i>
+        <div className="data-paragraph">
+          We see two distinctly different examples of immigrant experience on
+          foot. On one hand, we see Marjane in Persepolis, walking through the
+          streets of Vienna, always in constant movement, never feeling like she
+          belongs. The physical toll these two months of living on the streets
+          take on her body makes her so sick she ends up in the hospital. She
+          seems as if invisible to the larger society in Vienna, something
+          immigrants often feel when arriving in a new country. Juxtaposed with
+          this urban displacement is Schwarz's border crossing into Austria in
+          The Night in Lisbon. This experience represents a moment of high
+          intensity and significant transformation to the character as he steps
+          into the unknown. The physical act of walking across a border each
+          step symbolizes the transition from an old to new uncertain life. His
+          movement from security to adventure represents the immigrant's
+          willingness to embrace whatever is to come.
+        </div>
+      </>
+    ),
   },
   {
     title: "Books/Printing Press",
@@ -128,7 +223,52 @@ export const itemsData: VehicleCardData[] = [
     icon: <AutoStories />,
     literalContent:
       "The free Russian Press and what it stands for and what it entails of.",
-    allegoricalContent:
+    symbolicContent:
+      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+  },
+  {
+    title: "Language",
+    imageLiteral: (
+      <img
+        src={Languages}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
+    icon: <Language />,
+    literalContent:
+      "The free Russian Press and what it stands for and what it entails of.",
+    symbolicContent:
+      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+  },
+  {
+    title: "Photographs",
+    imageLiteral: (
+      <img
+        src={Photograph}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
+    icon: <CameraAlt />,
+    literalContent:
+      "The free Russian Press and what it stands for and what it entails of.",
+    symbolicContent:
+      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+  },
+  {
+    title: "Music & Other Art Forms",
+    imageLiteral: (
+      <img
+        src={Music}
+        className="vehicle-image"
+        alt="German Car During World War II"
+      />
+    ),
+    icon: <MusicNote />,
+    literalContent:
+      "The free Russian Press and what it stands for and what it entails of.",
+    symbolicContent:
       "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
   },
 ];

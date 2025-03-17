@@ -11,7 +11,7 @@ import { Button, ButtonGroup, Typography } from "@mui/material";
 
 const SplitContent = ({ data }: { data: VehicleCardData }) => {
   enum ContentType {
-    Allegorical,
+    Symbolic,
     Literal,
   }
   const [which, setWhich] = useState<ContentType>(ContentType.Literal);
@@ -32,14 +32,12 @@ const SplitContent = ({ data }: { data: VehicleCardData }) => {
           <span>Literal</span>
         </Button>
         <Button
-          className={
-            which === ContentType.Allegorical ? "Mui-focusVisible" : ""
-          }
+          className={which === ContentType.Symbolic ? "Mui-focusVisible" : ""}
           onClick={() => {
-            setWhich(ContentType.Allegorical);
+            setWhich(ContentType.Symbolic);
           }}
         >
-          <span> Allegorical</span>
+          <span> Symbolic</span>
         </Button>
       </ButtonGroup>
       <div>
@@ -47,7 +45,7 @@ const SplitContent = ({ data }: { data: VehicleCardData }) => {
           <div className="img-container">{data.imageLiteral} </div>
         ) : null}
 
-        {which === ContentType.Allegorical && <>{data.allegoricalContent}</>}
+        {which === ContentType.Symbolic && <>{data.symbolicContent}</>}
         {which === ContentType.Literal && <>{data.literalContent}</>}
       </div>
     </SplitContainer>
@@ -69,7 +67,7 @@ const Timeline = () => {
           emigration(leaving one’s homeland) or immigration(arriving in a new
           country), a migrant’s life exists in a state of division—caught
           between the geographical and psychological distance. While technically
-          a migrant becomes an “immigrant” only upon arrival, their identities
+          a migrant becomes an “immigrant” only upon arrival; their identities
           begin to reshape as early as the emigration process: the reason for
           leaving, saying goodbye to all one has known, and the memories crossed
           with one across country lines.
@@ -80,7 +78,7 @@ const Timeline = () => {
           sense of identity from their home country. The vehicles through which
           immigrants express and navigate this complex reality—ships crossing
           treacherous waters and planes crossing borders— serve as literal
-          transport and powerful metaphors for the immigrant journey. It is as a
+          transport and powerful metaphors for the immigrant journey. It is a
           bridge between their old and new world, allowing them to exist in this
           limbo of displacement, adaptation, and longing. These vehicles are
           essential to the immigrant experience as they symbolize more than a
