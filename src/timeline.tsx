@@ -43,7 +43,9 @@ const SplitContent = ({ data }: { data: VehicleCardData }) => {
         </Button>
       </ButtonGroup>
       <div>
-        {which === ContentType.Literal ? <div>{data.imageLiteral} </div> : null}
+        {which === ContentType.Literal ? (
+          <div className="img-container">{data.imageLiteral} </div>
+        ) : null}
 
         {which === ContentType.Allegorical && <>{data.allegoricalContent}</>}
         {which === ContentType.Literal && <>{data.literalContent}</>}

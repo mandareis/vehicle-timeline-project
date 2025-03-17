@@ -18,7 +18,7 @@ export interface VehicleCardData {
   imageLiteral: React.ReactNode;
   icon: React.ReactNode;
   literalContent: string;
-  allegoricalContent: string;
+  allegoricalContent: React.ReactNode | string;
 }
 
 export const itemsData: VehicleCardData[] = [
@@ -34,8 +34,27 @@ export const itemsData: VehicleCardData[] = [
         alt="German Car During World War II"
       />
     ),
-    allegoricalContent:
-      "Persepolis' family car the meaning of the nice car and what it means as a sanctuary.",
+    allegoricalContent: (
+      <>
+        <i>
+          'In some inexplicable way the car became a kind of dark mascot; its
+          technical perfection even dispelled my horror of it. My need of the
+          car made me forget about George.' — Josef Schwarz in Erich Maria
+          Remarque's The Night in Lisbon, p. 246
+        </i>
+        <div className="data-paragraph">
+          Cars can be seen as a means of escape of reality. This can be
+          manisfested in a number of ways. While Schwartz, Helen and the boy
+          travel throughout country borders, they enter an isolated bubble of
+          their own reality. Schwarz sees the car's asthetics as a safety,
+          regardless of its dark connections. While the car provides them
+          security of the immediate dangerous of war. It provides them with a
+          sanctuary. It also represents liminal space, as they find themselves
+          in-between state—neither fully out of the country they've left behind
+          nor in the destination ahead.
+        </div>
+      </>
+    ),
   },
   {
     title: "Trains",
