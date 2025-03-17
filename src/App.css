@@ -29,6 +29,11 @@ backdrop-filter: blur(5.1px);
 -webkit-backdrop-filter: blur(5.1px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 max-width: 100%;
+
+@media (max-width: 780px) {
+  height: 400px;
+  overflow-y: auto;
+}
 }
 
 .vertical-timeline-element-icon {

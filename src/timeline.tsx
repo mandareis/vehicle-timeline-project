@@ -73,16 +73,16 @@ const Timeline = () => {
           with one across country lines.
         </p>
         <p>
-          This metamorphosis is a challenging one—having to adapt to a new life
-          by learning a new language and cultural norms while still holding on
-          to a sense of identity from their home country. The vehicles through
-          which immigrants express and navigate this complex reality—ships
-          crossing treacherous waters and planes crossing borders— serve as
-          literal transport and powerful metaphors for the immigrant journey. It
-          is as a bridge between their old and new world, allowing them to exist
-          in this limbo of displacement, adaptation, and longing. These vehicles
-          are essential to the immigrant experience as they symbolize more than
-          a geographical relocation, but also as a way to exist as both your old
+          This duality is a challenging one—having to adapt to a new life by
+          learning a new language and cultural norms while still holding on to a
+          sense of identity from their home country. The vehicles through which
+          immigrants express and navigate this complex reality—ships crossing
+          treacherous waters and planes crossing borders— serve as literal
+          transport and powerful metaphors for the immigrant journey. It is as a
+          bridge between their old and new world, allowing them to exist in this
+          limbo of displacement, adaptation, and longing. These vehicles are
+          essential to the immigrant experience as they symbolize more than a
+          geographical relocation, but also as a way to exist as both your old
           and new self.
         </p>
       </div>

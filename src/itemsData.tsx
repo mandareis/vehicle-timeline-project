@@ -26,7 +26,7 @@ export const itemsData: VehicleCardData[] = [
     title: "Cars",
     icon: <TimeToLeave className="icons" />,
     literalContent:
-      "In 'A Night in Lisbon' refugees fleeing Nazi Germany by car.",
+      "While cars are not ideal for mass waves of emigration, as it can get stopped at every country border, they are a convenient mode of transportation for smaller groups. Cars can represent quicker mobility as it doesn't depend on a scheduled route. It also allows individuals to bring their posessions more easily. In the life of an immigrant,  a car can also signify can signify economic progression, as it might allow them to have a more stable life by having a wider range of employment options regardless of their address.",
     imageLiteral: (
       <img
         src={GermanCar}
