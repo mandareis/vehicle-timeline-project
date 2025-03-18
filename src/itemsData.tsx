@@ -228,9 +228,9 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <AutoStories />,
     literalContent:
-      "The free Russian Press and what it stands for and what it entails of.",
+      "While we've discussed the physical vehicles of the immigrant life, one must discuss cultural instruments of the immigrant experience. While many immigrants opted to leave their past behind, most couldn't and did not want to. With each wave of immigration came an increase in homeland-inspired art. Some immigrants, like Alexander Herzen, used these creative channels to give voice to those left behind. After his exile to London, Herzen started the Free Russian Press, urging anyone in Russia to provide, if possible, their thoughts on freedom and promising to publish whatever materials they could provide. Herzen's magazines soon began circulating throughout Europe, inspiring many and creating new communication channels.",
     symbolicContent:
-      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+      "For immigrant writers like Thomas Mann, the printed word became more than a means of communication and unity—it transformed into a vehicle that preserves their culture, language, and identity when separated from their homeland. Often, books these exiles produced were banned in their home countries, emphasizing how autonomy and individual expression were seen as a threat to authoritarian regimes.  Writers in exile, therefore, used the printing press as a weapon. Through publishing, immigrants created alternate spaces, a safe space of belonging beyond the reach of censors, and spaces where displaced immigrants could feel connected despite geographical distance.",
     literal: false,
   },
   {
