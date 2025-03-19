@@ -220,7 +220,7 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <Language />,
     literalContent:
-      "Language, the most valuable connection to their homes, makes it the most immediate vehicle immigrants use. Language can serve as both a bridge to their past and their old selves and a barrier in their new lives. While learning a new language can prove challenging, it is essential to the life of someone in a foreign land—even if it sometimes comes at the cost of being unable to maintain the fluency of their mother tongue. Immigrants develop “code-switching,” moving between the two languages. ",
+      "Language is vital for immigrants to navigate everyday life in their new home. From asking for directions to getting a job, the basic knowledge of a new language determines an immigrant's ability to live independently. Learning a new language often involves taking classes, studying independently via reading books and watching news, and immersing oneself in daily interactions with locals. Many immigrants feel they will only have mastered a language if they have no accents and perfected pronunciations. ",
     symbolicContent:
       "Language, the most valuable connection to their homes, makes it the most immediate vehicle immigrants use. Language can serve as both a bridge to their past and their old selves and a barrier in their new lives. While learning a new language can prove challenging, it is essential to the life of someone in a foreign land—even if it sometimes comes at the cost of being unable to maintain the fluency of their mother tongue. Immigrants develop “code-switching,” moving between the two languages. This split between languages creates a fragmented sense of identity, as sometimes fully expressing themselves becomes difficult in their new language. ",
     literal: false,
@@ -236,9 +236,9 @@ export const itemsData: VehicleCardData[] = [
     ),
     icon: <CameraAlt />,
     literalContent:
-      "The free Russian Press and what it stands for and what it entails of.",
+      "Photographs are a unique way of preserving a moment in time. Many immigrants possess photos of loved ones, a special place, or a memory they cherish. Photographs are significant because they often have no monetary value but are irreplaceable for the one who owns them. The further one is from home, and the more time passes,  the more precious photographs become. These photographs become portals that connect one to a specific moment that defines one's identity and journey. ",
     symbolicContent:
-      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+      "Photographs are fascinating as they represent a way to return to the past and their homes while being somewhere else, as seen with Ganin in Mary when he is transported to the memory of his love days back home in Russia. They also have the power to freeze time, that memory that one can carry with them forever. Photographs can either comfort these individuals navigating the in-between cultures or bring grief as the physical distance to both a time and the location becomes more apparent. ",
     literal: false,
   },
   {
@@ -251,10 +251,8 @@ export const itemsData: VehicleCardData[] = [
       />
     ),
     icon: <MusicNote />,
-    literalContent:
-      "The free Russian Press and what it stands for and what it entails of.",
-    symbolicContent:
-      "Thomas Mann's 'The Exiled Writer's Relation to his Homeland' - Mann articulates how the written word becomes a vehicle for maintaining a relationship with the homeland despite physical banishment. ",
+    literalContent: "",
+    symbolicContent: "",
     literal: false,
   },
 ];
