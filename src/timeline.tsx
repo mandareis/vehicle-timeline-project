@@ -101,27 +101,20 @@ const Timeline = () => {
     <>
       <div className="introduction-container">
         <p>
-          Throughout history, there have been waves of human migration driven by
+          Throughout history, waves of human migration have been driven by
           economic necessity, political upheaval, or simply the promise of
           better living conditions. Whether looking at it through the lens of
-          emigration (leaving one’s homeland) or immigration (arriving in a new
-          country), a migrant’s life exists in a state of division—caught
-          between the geographical and psychological distance. While
-          technically, a migrant becomes an “immigrant” only upon arrival, their
-          identities begin to reshape as early as the emigration process: the
-          reason for leaving, saying goodbye to all one has known, and the
-          memories crossed with one across country lines.
-        </p>
-        <p>
-          This duality is a challenging one—having to adapt to a new life by
-          learning a new language and cultural norms while still holding on to a
-          sense of identity from their home country. The vehicles through which
-          immigrants express and navigate this complex reality—ships crossing
-          treacherous waters and planes crossing borders— serve as literal
-          transport and powerful metaphors for the immigrant journey. It bridges
-          their worlds, allowing them to exist in this limbo of displacement,
-          adaptation, and longing while providing a way to exist as both their
-          old and new selves.
+          emigration or immigration, a migrant’s life is divided—caught between
+          geographical and psychological distance. Their identities begin to
+          reshape as early as the emigration process: reasons for departure,
+          parting ways with all one has known, and the memories one carries
+          across country lines. This duality proves challenging, as it involves
+          adapting to new cultures and languages while trying to preserve their
+          heritage and “original” identity. The various vehicles through which
+          immigrants express and navigate this complex reality serve as literal
+          transport and powerful metaphors for their journey—bridging their
+          worlds and allowing them to exist in this limbo of displacement while
+          providing a way to exist as both their old and new selves.
         </p>
       </div>
       <FilterControls
