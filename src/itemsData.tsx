@@ -24,7 +24,7 @@ export interface VehicleCardData {
   title: string;
   imageLiteral: React.ReactNode;
   icon: React.ReactNode;
-  literalContent: string;
+  literalContent: React.ReactNode | string;
   symbolicContent: React.ReactNode | string;
   literal: boolean;
 }
@@ -34,7 +34,7 @@ export const itemsData: VehicleCardData[] = [
     title: "Cars",
     icon: <TimeToLeave className="icons" />,
     literalContent:
-      "While not ideal for mass migrations, as they can be stopped at every country's border and checkpoints, cars offer a convenient mode of transportation for smaller groups. They offer ease of movement, allowing immigrants to travel on their schedule and bring some of their belongings. In the life of an immigrant, a car also signifies economic advancement and a sense of control—something they often struggle with when arriving in a new country— allowing them to navigate these new and unfamiliar terrains on their own terms. ",
+      "While not ideal for mass migrations, as they can be stopped at every country's border and checkpoints, cars offer a convenient mode of transportation for smaller groups. They offer ease of movement, allowing immigrants to travel on their schedule and bring some of their belongings. In the life of an immigrant, a car also signifies economic advancement and a sense of control—something they often struggle with when arriving in a new country— allowing them to navigate these new and unfamiliar terrains on their own terms.",
     imageLiteral: (
       <img
         src={GermanCar}
@@ -44,12 +44,10 @@ export const itemsData: VehicleCardData[] = [
     ),
     symbolicContent: (
       <>
-        <i>
-          'In some inexplicable way the car became a kind of dark mascot; its
-          technical perfection even dispelled my horror of it. My need of the
-          car made me forget about Georg.' — Josef Schwarz in Erich Maria
-          Remarque's The Night in Lisbon, p. 246
-        </i>
+        "In some inexplicable way the car became a kind of dark mascot; its
+        technical perfection even dispelled my horror of it. My need of the
+        car." — Josef Schwarz in Erich Maria Remarque's
+        <em> The Night in Lisbon</em>, p. 246
         <div className="data-paragraph">
           Cars can be seen as a means of escape from reality. While Schwarz,
           Helen, and the boy travel across country borders, they enter an
@@ -80,11 +78,9 @@ export const itemsData: VehicleCardData[] = [
       "Trains were the most popular means of mass emigration, given their departure frequency—making it easy to leave at any time of the day. However, especially during World War II, it became excruciatingly hard to get tickets, even more so for those fleeing and lacking the required documentation. Trains offered both safety and danger for refugees - while one could blend in with other passengers, they were routinely stopped at borders and thoroughly searched by authorities. Trains, contrary to cars, forced immigrants into a shared experience of fear and anxiety, often leading to silent bonds being created between survivors.",
     symbolicContent: (
       <>
-        <i>
-          'For almost a month, I lived at this rhythm: The night prostrate and
-          the day letting myself be carried across Vienna by sleep and the
-          tramway.' -- Marjane in Persepolis, p. 238
-        </i>
+        "For almost a month, I lived at this rhythm: The night prostrate and the
+        day letting myself be carried across Vienna by sleep and the tramway." —
+        Marjane in <i>Persepolis</i>, p. 238
         <div className="data-paragraph">
           Trains also imitate a transitional state—as travelers stare out the
           windows and ponder their lives—the ride evokes the idea of passing
@@ -108,8 +104,19 @@ export const itemsData: VehicleCardData[] = [
       />
     ),
     icon: <Flight />,
-    literalContent:
-      "Planes were a less common means of transportation for escape. However, planes did become more common for refugees in the latter half of the 20th century; as seen in Persepolis, Marjane's flight from Tehran to Vienna depicts a transition between two worlds. Planes, however, given their speed, provide immigrants with less time to confront their home's psychological and physical dislocation, abruptly delivering them to a new life without a gradual adjustment period.",
+    literalContent: (
+      <>
+        <p>
+          Planes were a less common means of transportation for escape. However,
+          planes did become more common for refugees in the latter half of the
+          20th century; as seen in <em>Persepolis</em>, Marjane's flight from
+          Tehran to Vienna depicts a transition between two worlds. Planes,
+          however, given their speed, provide immigrants with less time to
+          confront their home's psychological and physical dislocation, abruptly
+          delivering them to a new life without a gradual adjustment period.
+        </p>
+      </>
+    ),
     symbolicContent:
       "Traveling by airplane shares many symbolic qualities with other migration vehicles; however, it also adds a layer of physical detachment, of being above the earth, a state incomparable to any other form of transport. Yet, the airport itself emerges as a more symbolic immigrant experience. Airports perfectly embody what Foucault describes as a 'heterotopic space.' With their strictly regulated systems of open spaces (public terminals) and closed spaces (security checkpoints, gates), accessible only with specific permissions, such as flight tickets, airports create a visible picture of permission and exclusion. The airport then represents the national boundary and the bureaucratic process between the immigrant and their new life.",
 
@@ -126,15 +133,22 @@ export const itemsData: VehicleCardData[] = [
       />
     ),
     icon: <DirectionsBoat />,
-    literalContent:
-      "In The Night in Lisbon, the ship to America described at the port of Lisbon represents the final physical vehicle of escape that refugees had. Ships symbolize hope for the future and escape from persecution. Adding the entire Atlantic Ocean between themselves and the war, ships represent physical freedom. The slow journey by ship suspends time for an immigrant, as they are neither here nor there, allowing them to reflect on their experiences or plan for the future.",
+    literalContent: (
+      <>
+        In <em>The Night in Lisbon</em>, the ship to America described at the
+        port of Lisbon represents the final physical vehicle of escape that
+        refugees had. Ships symbolize hope for the future and escape from
+        persecution. Adding the entire Atlantic Ocean between themselves and the
+        war, ships represent physical freedom. The slow journey by ship suspends
+        time for an immigrant, as they are neither here nor there, allowing them
+        to reflect on their experiences or plan for the future.
+      </>
+    ),
     symbolicContent: (
       <>
-        <i>
-          "To me, life was the ship that lay down there on the Tagus, and it
-          didn't lead to the infinite... it led to America." — Narrator in Erich
-          Maria Remarque's The Night in Lisbon, p. 110
-        </i>
+        "To me, life was the ship that lay down there on the Tagus, and it
+        didn't lead to the infinite... it led to America." — Narrator in Erich
+        Maria Remarque's <i> The Night in Lisbon</i>, p. 110
         <div className="data-paragraph">
           The same ship serves as a symbol of salvation and rebirth, marking the
           immigrant's journey from their old identity to a new self across the
@@ -164,29 +178,28 @@ export const itemsData: VehicleCardData[] = [
       "The oldest means of migration is walking to a destination. Schwarz crosses the border back into Germany through Austria on foot. Typically, crossing a border on foot involves challenging terrains such as deserts, mountains, or dense forests. This method of transportation is often exhausting and can lead to dehydration or injury. What is unique about walking is that it is the only means of transport that involves the traveler’s own body as a means of transport—where their endurance and determination directly reflect their want to reach their destination.",
     symbolicContent: (
       <>
-        <i>
-          'I feel as though I were crossing a high bridge from one side of my
-          life to the other, and I knew that the bridge would fade away behind
-          me like silvery smoke and that I'd never be able to return. I was
-          passing from reason to feeling, from security to adventure, from
-          rationality to dream.' — Josef Schwarz in Erich Maria Remarque's The
-          Night in Lisbon, p. 23
-        </i>
+        "I feel as though I were crossing a high bridge from one side of my life
+        to the other, and I knew that the bridge would fade away behind me like
+        silvery smoke and that I'd never be able to return. I was passing from
+        reason to feeling, from security to adventure, from rationality to
+        dream." — Josef Schwarz in Erich Maria Remarque's
+        <i> The Night in Lisbon</i>, p. 23
         <div className="data-paragraph">
           Two distinctly different examples of the immigrant experience on foot
-          emerge in The Night in Lisbon and Persepolis. On the one hand, Marjane
-          in Persepolis walks through the streets of Vienna, always in constant
-          movement, never feeling like she belongs. Living on the streets for
-          two months takes such a physical toll on her body that she ends up in
-          the hospital. She seems invisible to the larger society in Vienna, a
-          feeling that many immigrants experience when arriving in a new
-          country. This urban displacement juxtaposes Schwarz's border crossing
-          into Austria in The Night in Lisbon. His experience represents a
-          high-intensity moment and a significant character transformation as he
-          steps into the unknown. In the physical act of walking across a
-          border, each step symbolizes the transition from an old to a new,
-          uncertain life. His movement from security to adventure represents the
-          immigrant's willingness to embrace whatever comes next.
+          emerge in <i>The Night in Lisbon</i> and <i>Persepolis</i>. On the one
+          hand, Marjane in <em>Persepolis</em> walks through the streets of
+          Vienna, always in constant movement, never feeling like she belongs.
+          Living on the streets for two months takes such a physical toll on her
+          body that she ends up in the hospital. She seems invisible to the
+          larger society in Vienna, a feeling that many immigrants experience
+          when arriving in a new country. This urban displacement juxtaposes
+          Schwarz's border crossing into Austria in <i>The Night in Lisbon</i>.
+          His experience represents a high-intensity moment and a significant
+          character transformation as he steps into the unknown. In the physical
+          act of walking across a border, each step symbolizes the transition
+          from an old to a new, uncertain life. His movement from security to
+          adventure represents the immigrant's willingness to embrace whatever
+          comes next.
         </div>
       </>
     ),
@@ -236,8 +249,17 @@ export const itemsData: VehicleCardData[] = [
     icon: <CameraAlt />,
     literalContent:
       "Photographs are a unique way of preserving a moment in time. Many immigrants carry photos of loved ones, a special place, or a cherished memory on their journeys to a new world. Photographs are significant because they often have no monetary value but are priceless to whoever owns them. The further one is from home, the more time passes, the more precious photographs become. These photographs become portals to immigrants that connect them to a specific moment that defines their identity and life.",
-    symbolicContent:
-      "Photographs represent a way to return to a past and a home while being somewhere else, as seen with Ganin in Mary when he is transported to the memory of his love days back home in Russia. They also have the power to freeze time, a memory they can carry forever. Photographs can either comfort these individuals navigating the in-between cultures or bring grief as the physical distance to both a time and the location becomes more apparent.",
+    symbolicContent: (
+      <>
+        Photographs represent a way to return to a past and a home while being
+        somewhere else, as seen with Ganin in <em>Mary</em> when he is
+        transported to the memory of his love days back home in Russia. They
+        also have the power to freeze time, a memory they can carry forever.
+        Photographs can either comfort these individuals navigating the
+        in-between cultures or bring grief as the physical distance to both a
+        time and the location becomes more apparent.
+      </>
+    ),
     literal: false,
   },
   {
